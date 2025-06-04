@@ -1,8 +1,10 @@
-// vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
 
 export default defineConfig({
-base: '/Grano/', // your repo name
-plugins: [react()],
-})
+  server: {
+    mimeTypes: {
+      'font/woff': ['woff'],
+      'font/woff2': ['woff2']
+    }
+  }
+});
